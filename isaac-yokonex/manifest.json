@@ -1,0 +1,30 @@
+{
+  "id": "isaac",
+  "name": "Yokonex Isaac Link",
+  "version": "1.1.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "采集《以撒的结合：忏悔》游戏事件，并通过本机 WebSocket 发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "isaac",
+    "displayName": "以撒的结合：忏悔",
+    "adapter": "Lua Mod + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "开始游戏", "eventKey": "isaac.run_started", "commandId": "isaac-run-started" },
+      { "name": "结束游戏", "eventKey": "isaac.run_ended", "commandId": "isaac-run-ended" },
+      { "name": "进入新层", "eventKey": "isaac.floor_entered", "commandId": "isaac-floor-entered" },
+      { "name": "进入房间", "eventKey": "isaac.room_entered", "commandId": "isaac-room-entered" },
+      { "name": "玩家受伤", "eventKey": "isaac.player_damaged", "commandId": "isaac-player-damaged" },
+      { "name": "玩家治疗", "eventKey": "isaac.player_healed", "commandId": "isaac-player-healed" },
+      { "name": "玩家死亡", "eventKey": "isaac.player_died", "commandId": "isaac-player-died" },
+      { "name": "玩家复活", "eventKey": "isaac.player_revived", "commandId": "isaac-player-revived" },
+      { "name": "玩家加入", "eventKey": "isaac.player_joined", "commandId": "isaac-player-joined" },
+      { "name": "角色切换", "eventKey": "isaac.character_changed", "commandId": "isaac-character-changed" },
+      { "name": "获得道具", "eventKey": "isaac.collectible_gained", "commandId": "isaac-collectible-gained" },
+      { "name": "失去道具", "eventKey": "isaac.collectible_lost", "commandId": "isaac-collectible-lost" },
+      { "name": "击杀 Boss", "eventKey": "isaac.boss_killed", "commandId": "isaac-boss-killed" }
+    ]
+  }
+}

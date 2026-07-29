@@ -1,0 +1,7 @@
+# Yokonex Buckshot Roulette Link
+
+监听《恶魔轮盘》的对局、射击、生命值、弹药和物品事件，并发送到 Yokonex GameHub。
+
+- 安装与使用：[`USAGE.md`](./USAGE.md)
+- 适配器配置：[`manifest.json`](./manifest.json)
+- 接口说明：[`BR_API.md`](./BR_API.md)

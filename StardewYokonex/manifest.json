@@ -1,0 +1,27 @@
+{
+  "Name": "Yokonex Stardew Link",
+  "Author": "辞年",
+  "Version": "1.0.0",
+  "Description": "将星露谷物语事件发送到 Yokonex-Gamehub。",
+  "description": "通过 SMAPI 采集星露谷物语的存档、日期、物品、技能与多人事件，并发送到 Gamehub。",
+  "UniqueID": "Yokonex.StardewLink",
+  "EntryDll": "StardewYokonex.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": [],
+  "yokonex": {
+    "source": "stardew",
+    "displayName": "星露谷物语",
+    "adapter": "SMAPI Mod",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "载入存档", "eventKey": "stardew.save_loaded", "commandId": "stardew-save-loaded" },
+      { "name": "一天开始", "eventKey": "stardew.day_start", "commandId": "stardew-day-start" },
+      { "name": "一天结束", "eventKey": "stardew.day_end", "commandId": "stardew-day-end" },
+      { "name": "获得物品", "eventKey": "stardew.item_gained", "commandId": "stardew-item-gained" },
+      { "name": "技能升级", "eventKey": "stardew.skill_level_up", "commandId": "stardew-skill-level-up" },
+      { "name": "切换地点", "eventKey": "stardew.location_changed", "commandId": "stardew-location-changed" },
+      { "name": "玩家加入", "eventKey": "stardew.player_join", "commandId": "stardew-player-join" },
+      { "name": "玩家离开", "eventKey": "stardew.player_leave", "commandId": "stardew-player-leave" }
+    ]
+  }
+}

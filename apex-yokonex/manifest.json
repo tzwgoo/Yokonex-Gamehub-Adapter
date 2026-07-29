@@ -1,0 +1,56 @@
+{
+  "author": "辞年",
+  "version": "1.0.0",
+  "description": "通过 Overwolf GEP 采集 Apex Legends 对局、伤害、击倒与击杀等事件，并发送到 Gamehub。",
+  "manifest_version": "1",
+  "type": "WebApp",
+  "permissions": ["GameInfo"],
+  "meta": {
+    "name": "Yokonex Apex Link",
+    "version": "1.0.0",
+    "minimum-overwolf-version": "0.220.0.1",
+    "author": "辞年",
+    "description": "将 Apex Legends GEP 事件发送到 Yokonex-Gamehub"
+  },
+  "data": {
+    "game_targeting": { "type": "dedicated", "game_ids": [21566] },
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "index.html",
+        "is_background_page": true,
+        "native_window": true,
+        "desktop_only": true,
+        "size": { "width": 420, "height": 280 },
+        "min_size": { "width": 380, "height": 240 }
+      }
+    },
+    "game_events": [21566],
+    "launch_events": [
+      { "event": "GameLaunch", "event_data": { "game_ids": [21566] }, "start_minimized": true }
+    ]
+  },
+  "yokonex": {
+    "source": "apex",
+    "marketplaceEnabled": false,
+    "displayName": "Apex Legends",
+    "adapter": "Overwolf GEP",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "对局开始", "eventKey": "apex.match_start", "commandId": "apex-match-start" },
+      { "name": "对局结束", "eventKey": "apex.match_end", "commandId": "apex-match-end" },
+      { "name": "回合开始", "eventKey": "apex.round_start", "commandId": "apex-round-start" },
+      { "name": "回合结束", "eventKey": "apex.round_end", "commandId": "apex-round-end" },
+      { "name": "造成伤害", "eventKey": "apex.damage", "commandId": "apex-damage" },
+      { "name": "击倒敌人", "eventKey": "apex.knockdown", "commandId": "apex-knockdown" },
+      { "name": "击杀敌人", "eventKey": "apex.kill", "commandId": "apex-kill" },
+      { "name": "获得助攻", "eventKey": "apex.assist", "commandId": "apex-assist" },
+      { "name": "玩家倒地", "eventKey": "apex.player_knocked", "commandId": "apex-player-knocked" },
+      { "name": "玩家死亡", "eventKey": "apex.player_death", "commandId": "apex-player-death" },
+      { "name": "玩家被救起", "eventKey": "apex.player_revived", "commandId": "apex-player-revived" },
+      { "name": "信标重生", "eventKey": "apex.respawn", "commandId": "apex-respawn" },
+      { "name": "对局获胜", "eventKey": "apex.victory", "commandId": "apex-victory" },
+      { "name": "队伍淘汰", "eventKey": "apex.team_eliminated", "commandId": "apex-team-eliminated" }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Yokonex DST Link",
+  "author": "辞年",
+  "version": "1.0.0",
+  "description": "监听饥荒联机版玩家受伤、死亡与复活事件，并发送到 Gamehub 触发设备联动。",
+  "yokonex": {
+    "source": "dst",
+    "displayName": "饥荒联机版",
+    "adapter": "客户端日志 Mod",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "玩家受伤", "eventKey": "dst.player_damaged", "commandId": "player_hurt" },
+      { "name": "玩家死亡", "eventKey": "dst.player_death", "commandId": "player_death" },
+      { "name": "玩家复活", "eventKey": "dst.player_resurrected", "commandId": "player_resurrected" }
+    ]
+  }
+}

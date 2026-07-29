@@ -1,0 +1,20 @@
+{
+  "name": "Yokonex CS2 Link",
+  "author": "辞年",
+  "version": "1.0.0",
+  "description": "通过 CS2 Game State Integration 采集受伤、死亡、致盲、燃烧与回合事件，并发送到 Gamehub。",
+  "yokonex": {
+    "source": "cs2",
+    "displayName": "Counter-Strike 2",
+    "adapter": "Game State Integration",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "玩家受伤", "eventKey": "cs2.player_hurt", "commandId": "player_hurt" },
+      { "name": "玩家死亡", "eventKey": "cs2.player_death", "commandId": "player_death" },
+      { "name": "闪光致盲", "eventKey": "cs2.player_flashed", "commandId": "player_flashed" },
+      { "name": "烟雾影响", "eventKey": "cs2.player_smoked", "commandId": "player_smoked" },
+      { "name": "燃烧伤害", "eventKey": "cs2.player_burning", "commandId": "player_burning" },
+      { "name": "回合结束", "eventKey": "cs2.round_end", "commandId": "round_end" }
+    ]
+  }
+}

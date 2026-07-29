@@ -1,0 +1,28 @@
+{
+  "id": "wow",
+  "name": "Yokonex World of Warcraft Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "读取《魔兽世界》原生战斗日志，并发送本地玩家战斗事件到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "wow",
+    "marketplaceEnabled": false,
+    "displayName": "魔兽世界",
+    "adapter": "原生 Combat Log 监听器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "首领战开始", "eventKey": "wow.encounter_started", "commandId": "wow-encounter-started" },
+      { "name": "首领战胜利", "eventKey": "wow.encounter_won", "commandId": "wow-encounter-won" },
+      { "name": "首领战失败", "eventKey": "wow.encounter_lost", "commandId": "wow-encounter-lost" },
+      { "name": "玩家受到伤害", "eventKey": "wow.player_damaged", "commandId": "wow-player-damaged" },
+      { "name": "玩家受到治疗", "eventKey": "wow.player_healed", "commandId": "wow-player-healed" },
+      { "name": "玩家死亡", "eventKey": "wow.player_died", "commandId": "wow-player-died" },
+      { "name": "玩家击杀敌人", "eventKey": "wow.enemy_killed", "commandId": "wow-enemy-killed" },
+      { "name": "玩家施法成功", "eventKey": "wow.spell_cast", "commandId": "wow-spell-cast" },
+      { "name": "玩家打断施法", "eventKey": "wow.spell_interrupted", "commandId": "wow-spell-interrupted" }
+    ]
+  }
+}

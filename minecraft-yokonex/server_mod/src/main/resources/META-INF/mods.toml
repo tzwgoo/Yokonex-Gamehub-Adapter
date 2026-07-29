@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="CC0-1.0"
+
+[[mods]]
+modId="yokonex_link"
+version="${file.jarVersion}"
+displayName="Yokonex GameHub Minecraft Server Link"
+credits="辞年"
+authors="辞年"
+description='''
+采集 Minecraft 专用服务器事件，定向发送给对应玩家客户端的 Yokonex-Gamehub。
+本模组不保存 IM 账号，也不直接连接任何 IM 服务。
+'''
+
+[[dependencies.yokonex_link]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.yokonex_link]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

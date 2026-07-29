@@ -1,0 +1,27 @@
+{
+  "id": "factorio",
+  "name": "Yokonex Factorio Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "采集 Factorio 2.x 游戏事件，并通过本机 WebSocket 发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "factorio",
+    "displayName": "Factorio",
+    "adapter": "Lua Mod + UDP/WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "玩家受伤", "eventKey": "factorio.player_damaged", "commandId": "factorio-player-damaged" },
+      { "name": "玩家死亡", "eventKey": "factorio.player_died", "commandId": "factorio-player-died" },
+      { "name": "玩家重生", "eventKey": "factorio.player_respawned", "commandId": "factorio-player-respawned" },
+      { "name": "建造实体", "eventKey": "factorio.entity_built", "commandId": "factorio-entity-built" },
+      { "name": "采掘实体", "eventKey": "factorio.entity_mined", "commandId": "factorio-entity-mined" },
+      { "name": "研究完成", "eventKey": "factorio.research_finished", "commandId": "factorio-research-finished" },
+      { "name": "获得成就", "eventKey": "factorio.achievement_unlocked", "commandId": "factorio-achievement-unlocked" },
+      { "name": "发射火箭", "eventKey": "factorio.rocket_launched", "commandId": "factorio-rocket-launched" },
+      { "name": "列车状态变化", "eventKey": "factorio.train_state_changed", "commandId": "factorio-train-state-changed" }
+    ]
+  }
+}

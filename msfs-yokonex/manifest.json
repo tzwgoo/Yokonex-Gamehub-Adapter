@@ -1,0 +1,27 @@
+{
+  "id": "msfs",
+  "name": "Yokonex Microsoft Flight Simulator Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "通过 SimConnect 采集微软模拟飞行 2020/2024 事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "msfs",
+    "displayName": "微软模拟飞行 2020 / 2024",
+    "adapter": "SimConnect + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "连接模拟器", "eventKey": "msfs.connected", "commandId": "msfs-connected" },
+      { "name": "起飞", "eventKey": "msfs.takeoff", "commandId": "msfs-takeoff" },
+      { "name": "着陆", "eventKey": "msfs.landed", "commandId": "msfs-landed" },
+      { "name": "失速警告", "eventKey": "msfs.stall_warning", "commandId": "msfs-stall-warning" },
+      { "name": "超速警告", "eventKey": "msfs.overspeed_warning", "commandId": "msfs-overspeed-warning" },
+      { "name": "发生坠毁", "eventKey": "msfs.crashed", "commandId": "msfs-crashed" },
+      { "name": "启动发动机", "eventKey": "msfs.engine_started", "commandId": "msfs-engine-started" },
+      { "name": "关闭发动机", "eventKey": "msfs.engine_stopped", "commandId": "msfs-engine-stopped" },
+      { "name": "低燃油", "eventKey": "msfs.low_fuel", "commandId": "msfs-low-fuel" }
+    ]
+  }
+}

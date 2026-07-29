@@ -1,0 +1,34 @@
+{
+  "name": "Terraria YOKONEX Link",
+  "author": "辞年",
+  "version": "0.2.0",
+  "description": "监听泰拉瑞亚玩家受伤、死亡、天气与 Boss 等 tModLoader 事件，并发送到 Gamehub。",
+  "repository": "https://github.com/tzwgoo/Terraria-YOKONEX",
+  "yokonex": {
+    "source": "terraria",
+    "displayName": "泰拉瑞亚",
+    "adapter": "tModLoader Mod",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "玩家被 NPC 命中", "eventKey": "player_hit_by_npc", "commandId": "player_hit_by_npc" },
+      { "name": "玩家被弹幕命中", "eventKey": "player_hit_by_projectile", "commandId": "player_hit_by_projectile" },
+      { "name": "玩家受伤", "eventKey": "player_hurt", "commandId": "player_hurt" },
+      { "name": "玩家死亡", "eventKey": "player_death", "commandId": "player_death" },
+      { "name": "玩家复活", "eventKey": "player_respawn", "commandId": "player_respawn" },
+      { "name": "拾取物品", "eventKey": "item_pickup", "commandId": "item_pickup" },
+      { "name": "白天开始", "eventKey": "day_start", "commandId": "day_start" },
+      { "name": "夜晚开始", "eventKey": "night_start", "commandId": "night_start" },
+      { "name": "血月开始", "eventKey": "blood_moon_start", "commandId": "blood_moon_start" },
+      { "name": "下雨开始", "eventKey": "rain_start", "commandId": "rain_start" },
+      { "name": "下雨结束", "eventKey": "rain_stop", "commandId": "rain_stop" },
+      { "name": "史莱姆雨开始", "eventKey": "slime_rain_start", "commandId": "slime_rain_start" },
+      { "name": "史莱姆雨结束", "eventKey": "slime_rain_stop", "commandId": "slime_rain_stop" },
+      { "name": "日食开始", "eventKey": "eclipse_start", "commandId": "eclipse_start" },
+      { "name": "日食结束", "eventKey": "eclipse_stop", "commandId": "eclipse_stop" },
+      { "name": "入侵开始", "eventKey": "invasion_start", "commandId": "invasion_start" },
+      { "name": "入侵结束", "eventKey": "invasion_complete", "commandId": "invasion_complete" },
+      { "name": "Boss 出现", "eventKey": "boss_spawn", "commandId": "boss_spawn" },
+      { "name": "Boss 击败", "eventKey": "boss_defeat", "commandId": "boss_defeat" }
+    ]
+  }
+}

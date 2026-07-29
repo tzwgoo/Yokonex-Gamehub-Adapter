@@ -1,0 +1,11 @@
+{
+  "id": "Yokonex-STS2-Events",
+  "name": "Yokonex STS2 Events",
+  "author": "辞年",
+  "description": "仅采集《杀戮尖塔2》游戏事件并交给 Yokonex GameHub。",
+  "version": "1.0",
+  "has_pck": false,
+  "has_dll": true,
+  "dependencies": [],
+  "affects_gameplay": false
+}

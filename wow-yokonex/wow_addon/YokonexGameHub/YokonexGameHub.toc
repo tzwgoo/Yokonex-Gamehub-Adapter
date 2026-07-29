@@ -1,0 +1,7 @@
+## Interface: 120005
+## Title: Yokonex GameHub
+## Notes: Enables the native combat log for Yokonex GameHub.
+## Author: Yokonex
+## Version: 1.0.0
+
+YokonexGameHub.lua

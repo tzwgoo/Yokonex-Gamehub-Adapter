@@ -1,0 +1,30 @@
+{
+  "id": "f1",
+  "name": "Yokonex F1 24/25 Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "接收 EA SPORTS F1 24/25 UDP 事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "f1",
+    "displayName": "EA SPORTS F1 24 / F1 25",
+    "adapter": "官方 UDP 遥测 + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "比赛开始", "eventKey": "f1.session_started", "commandId": "f1-session-started" },
+      { "name": "比赛结束", "eventKey": "f1.session_ended", "commandId": "f1-session-ended" },
+      { "name": "碰撞", "eventKey": "f1.collision", "commandId": "f1-collision" },
+      { "name": "最快圈", "eventKey": "f1.fastest_lap", "commandId": "f1-fastest-lap" },
+      { "name": "退赛", "eventKey": "f1.retirement", "commandId": "f1-retirement" },
+      { "name": "获得处罚", "eventKey": "f1.penalty", "commandId": "f1-penalty" },
+      { "name": "完成超车", "eventKey": "f1.overtake", "commandId": "f1-overtake" },
+      { "name": "安全车变化", "eventKey": "f1.safety_car", "commandId": "f1-safety-car" },
+      { "name": "熄灯起跑", "eventKey": "f1.lights_out", "commandId": "f1-lights-out" },
+      { "name": "比赛获胜", "eventKey": "f1.race_winner", "commandId": "f1-race-winner" },
+      { "name": "DRS 开启", "eventKey": "f1.drs_enabled", "commandId": "f1-drs-enabled" },
+      { "name": "DRS 关闭", "eventKey": "f1.drs_disabled", "commandId": "f1-drs-disabled" }
+    ]
+  }
+}

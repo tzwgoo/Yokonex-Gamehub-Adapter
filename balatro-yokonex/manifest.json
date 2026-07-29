@@ -1,0 +1,28 @@
+{
+  "id": "balatro",
+  "name": "Yokonex Balatro Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "通过 Steamodded 采集 Balatro 游戏事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "balatro",
+    "displayName": "Balatro",
+    "adapter": "Steamodded Lua Mod + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "开始牌局", "eventKey": "balatro.run_started", "commandId": "balatro-run-started" },
+      { "name": "打出牌型", "eventKey": "balatro.hand_played", "commandId": "balatro-hand-played" },
+      { "name": "回合结束", "eventKey": "balatro.round_ended", "commandId": "balatro-round-ended" },
+      { "name": "击败 Boss 盲注", "eventKey": "balatro.boss_blind_defeated", "commandId": "balatro-boss-blind-defeated" },
+      { "name": "获得小丑牌", "eventKey": "balatro.joker_gained", "commandId": "balatro-joker-gained" },
+      { "name": "失去小丑牌", "eventKey": "balatro.joker_lost", "commandId": "balatro-joker-lost" },
+      { "name": "获得消耗牌", "eventKey": "balatro.consumable_gained", "commandId": "balatro-consumable-gained" },
+      { "name": "金钱增加", "eventKey": "balatro.money_gained", "commandId": "balatro-money-gained" },
+      { "name": "金钱减少", "eventKey": "balatro.money_spent", "commandId": "balatro-money-spent" },
+      { "name": "游戏结束", "eventKey": "balatro.game_over", "commandId": "balatro-game-over" }
+    ]
+  }
+}

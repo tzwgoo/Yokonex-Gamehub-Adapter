@@ -1,0 +1,22 @@
+{
+  "id": "sc2",
+  "name": "Yokonex StarCraft II Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "检测《星际争霸 II》的运行和前台状态，不读取或生成录像文件。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "sc2",
+    "displayName": "星际争霸 II",
+    "adapter": "Windows 原生进程与前台窗口监听器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "游戏启动", "eventKey": "sc2.game_started", "commandId": "sc2-game-started" },
+      { "name": "进入游戏前台", "eventKey": "sc2.game_focused", "commandId": "sc2-game-focused" },
+      { "name": "切到游戏后台", "eventKey": "sc2.game_blurred", "commandId": "sc2-game-blurred" },
+      { "name": "游戏退出", "eventKey": "sc2.game_exited", "commandId": "sc2-game-exited" }
+    ]
+  }
+}

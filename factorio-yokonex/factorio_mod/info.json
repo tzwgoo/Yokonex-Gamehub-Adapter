@@ -1,0 +1,8 @@
+{
+  "name": "yokonex_factorio_events",
+  "version": "1.0.0",
+  "title": "Yokonex Factorio Events",
+  "author": "辞年",
+  "factorio_version": "2.0",
+  "description": "将关键游戏事件发送到本机 Yokonex GameHub 桥接器。"
+}

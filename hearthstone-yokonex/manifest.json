@@ -1,0 +1,26 @@
+{
+  "id": "hearthstone",
+  "name": "Yokonex Hearthstone Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "读取《炉石传说》Power.log，并发送本地玩家对局事件到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "hearthstone",
+    "marketplaceEnabled": false,
+    "displayName": "炉石传说",
+    "adapter": "原生 Power.log 监听器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "对局开始", "eventKey": "hearthstone.match_started", "commandId": "hearthstone-match-started" },
+      { "name": "回合开始", "eventKey": "hearthstone.turn_started", "commandId": "hearthstone-turn-started" },
+      { "name": "打出卡牌", "eventKey": "hearthstone.card_played", "commandId": "hearthstone-card-played" },
+      { "name": "英雄受到伤害", "eventKey": "hearthstone.player_damaged", "commandId": "hearthstone-player-damaged" },
+      { "name": "英雄受到治疗", "eventKey": "hearthstone.player_healed", "commandId": "hearthstone-player-healed" },
+      { "name": "对局胜利", "eventKey": "hearthstone.match_won", "commandId": "hearthstone-match-won" },
+      { "name": "对局失败", "eventKey": "hearthstone.match_lost", "commandId": "hearthstone-match-lost" }
+    ]
+  }
+}

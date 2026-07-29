@@ -1,0 +1,52 @@
+{
+  "author": "辞年",
+  "version": "1.0.0",
+  "description": "通过 Overwolf GEP 采集 VALORANT 对局、回合、击杀与爆能器等事件，并发送到 Gamehub。",
+  "manifest_version": "1",
+  "type": "WebApp",
+  "permissions": ["GameInfo"],
+  "meta": {
+    "name": "Yokonex VALORANT Link",
+    "version": "1.0.0",
+    "minimum-overwolf-version": "0.220.0.1",
+    "author": "辞年",
+    "description": "将 VALORANT GEP 事件发送到 Yokonex-Gamehub"
+  },
+  "data": {
+    "game_targeting": { "type": "dedicated", "game_ids": [21640] },
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "index.html",
+        "is_background_page": true,
+        "native_window": true,
+        "desktop_only": true,
+        "size": { "width": 420, "height": 280 },
+        "min_size": { "width": 380, "height": 240 }
+      }
+    },
+    "game_events": [21640],
+    "launch_events": [
+      { "event": "GameLaunch", "event_data": { "game_ids": [21640] }, "start_minimized": true }
+    ]
+  },
+  "yokonex": {
+    "source": "valorant",
+    "marketplaceEnabled": false,
+    "displayName": "VALORANT",
+    "adapter": "Overwolf GEP",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "对局开始", "eventKey": "valorant.match_start", "commandId": "valorant-match-start" },
+      { "name": "对局结束", "eventKey": "valorant.match_end", "commandId": "valorant-match-end" },
+      { "name": "回合开始", "eventKey": "valorant.round_start", "commandId": "valorant-round-start" },
+      { "name": "回合结束", "eventKey": "valorant.round_end", "commandId": "valorant-round-end" },
+      { "name": "玩家击杀", "eventKey": "valorant.player_kill", "commandId": "valorant-player-kill" },
+      { "name": "爆头击杀", "eventKey": "valorant.player_headshot", "commandId": "valorant-player-headshot" },
+      { "name": "玩家死亡", "eventKey": "valorant.player_death", "commandId": "valorant-player-death" },
+      { "name": "队友击杀", "eventKey": "valorant.teammate_kill", "commandId": "valorant-teammate-kill" },
+      { "name": "爆能器引爆", "eventKey": "valorant.spike_detonated", "commandId": "valorant-spike-detonated" },
+      { "name": "爆能器拆除", "eventKey": "valorant.spike_defused", "commandId": "valorant-spike-defused" }
+    ]
+  }
+}

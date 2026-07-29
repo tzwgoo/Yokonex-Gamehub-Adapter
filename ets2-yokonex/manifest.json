@@ -1,0 +1,30 @@
+{
+  "id": "ets2",
+  "name": "Yokonex Euro Truck Simulator 2 Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "采集欧洲卡车模拟2官方 SCS 遥测事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "ets2",
+    "displayName": "欧洲卡车模拟2",
+    "adapter": "SCS Telemetry SDK + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py", "scs_bridge.py"],
+    "events": [
+      { "name": "连接游戏", "eventKey": "ets2.connected", "commandId": "ets2-connected" },
+      { "name": "开始货运", "eventKey": "ets2.job_started", "commandId": "ets2-job-started" },
+      { "name": "完成货运", "eventKey": "ets2.job_delivered", "commandId": "ets2-job-delivered" },
+      { "name": "取消货运", "eventKey": "ets2.job_cancelled", "commandId": "ets2-job-cancelled" },
+      { "name": "收到罚款", "eventKey": "ets2.fined", "commandId": "ets2-fined" },
+      { "name": "支付过路费", "eventKey": "ets2.toll_paid", "commandId": "ets2-toll-paid" },
+      { "name": "乘坐渡轮", "eventKey": "ets2.ferry_used", "commandId": "ets2-ferry-used" },
+      { "name": "搭乘火车", "eventKey": "ets2.train_used", "commandId": "ets2-train-used" },
+      { "name": "完成加油", "eventKey": "ets2.refueled", "commandId": "ets2-refueled" },
+      { "name": "燃油警告", "eventKey": "ets2.fuel_warning", "commandId": "ets2-fuel-warning" },
+      { "name": "启动发动机", "eventKey": "ets2.engine_started", "commandId": "ets2-engine-started" },
+      { "name": "关闭发动机", "eventKey": "ets2.engine_stopped", "commandId": "ets2-engine-stopped" }
+    ]
+  }
+}

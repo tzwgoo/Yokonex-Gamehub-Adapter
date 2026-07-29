@@ -1,0 +1,30 @@
+{
+  "id": "ats",
+  "name": "Yokonex American Truck Simulator Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "采集美国卡车模拟官方 SCS 遥测事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "ats",
+    "displayName": "美国卡车模拟",
+    "adapter": "SCS Telemetry SDK + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py", "scs_bridge.py"],
+    "events": [
+      { "name": "连接游戏", "eventKey": "ats.connected", "commandId": "ats-connected" },
+      { "name": "开始货运", "eventKey": "ats.job_started", "commandId": "ats-job-started" },
+      { "name": "完成货运", "eventKey": "ats.job_delivered", "commandId": "ats-job-delivered" },
+      { "name": "取消货运", "eventKey": "ats.job_cancelled", "commandId": "ats-job-cancelled" },
+      { "name": "收到罚款", "eventKey": "ats.fined", "commandId": "ats-fined" },
+      { "name": "支付过路费", "eventKey": "ats.toll_paid", "commandId": "ats-toll-paid" },
+      { "name": "乘坐渡轮", "eventKey": "ats.ferry_used", "commandId": "ats-ferry-used" },
+      { "name": "搭乘火车", "eventKey": "ats.train_used", "commandId": "ats-train-used" },
+      { "name": "完成加油", "eventKey": "ats.refueled", "commandId": "ats-refueled" },
+      { "name": "燃油警告", "eventKey": "ats.fuel_warning", "commandId": "ats-fuel-warning" },
+      { "name": "启动发动机", "eventKey": "ats.engine_started", "commandId": "ats-engine-started" },
+      { "name": "关闭发动机", "eventKey": "ats.engine_stopped", "commandId": "ats-engine-stopped" }
+    ]
+  }
+}

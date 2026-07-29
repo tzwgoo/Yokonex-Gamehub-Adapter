@@ -1,0 +1,29 @@
+{
+  "id": "cult_of_the_lamb",
+  "name": "Yokonex Cult of the Lamb Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "通过 BepInEx/Harmony 采集《咩咩启示录》事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "cult_of_the_lamb",
+    "displayName": "咩咩启示录（Cult of the Lamb）",
+    "adapter": "BepInEx Mod + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "远征开始", "eventKey": "cult_of_the_lamb.crusade_started", "commandId": "cult-of-the-lamb-crusade-started" },
+      { "name": "远征结束", "eventKey": "cult_of_the_lamb.crusade_ended", "commandId": "cult-of-the-lamb-crusade-ended" },
+      { "name": "玩家受伤", "eventKey": "cult_of_the_lamb.player_damaged", "commandId": "cult-of-the-lamb-player-damaged" },
+      { "name": "玩家治疗", "eventKey": "cult_of_the_lamb.player_healed", "commandId": "cult-of-the-lamb-player-healed" },
+      { "name": "玩家死亡", "eventKey": "cult_of_the_lamb.player_died", "commandId": "cult-of-the-lamb-player-died" },
+      { "name": "击杀敌人", "eventKey": "cult_of_the_lamb.enemy_killed", "commandId": "cult-of-the-lamb-enemy-killed" },
+      { "name": "新信徒加入", "eventKey": "cult_of_the_lamb.follower_joined", "commandId": "cult-of-the-lamb-follower-joined" },
+      { "name": "信徒死亡", "eventKey": "cult_of_the_lamb.follower_died", "commandId": "cult-of-the-lamb-follower-died" },
+      { "name": "信徒复活", "eventKey": "cult_of_the_lamb.follower_revived", "commandId": "cult-of-the-lamb-follower-revived" },
+      { "name": "获得塔罗牌", "eventKey": "cult_of_the_lamb.tarot_gained", "commandId": "cult-of-the-lamb-tarot-gained" },
+      { "name": "失去塔罗牌", "eventKey": "cult_of_the_lamb.tarot_lost", "commandId": "cult-of-the-lamb-tarot-lost" }
+    ]
+  }
+}

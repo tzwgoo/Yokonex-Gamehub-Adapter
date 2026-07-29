@@ -1,0 +1,66 @@
+{
+  "id": "buckshot_roulette",
+  "name": "buckshot_gamehub",
+  "namespace": "cinian",
+  "version": "1.0.0",
+  "version_number": "1.0.0",
+  "sdk": "1",
+  "author": "陈辞年",
+  "website_url": "",
+  "description": "监听恶魔轮盘的对局、射击、生命值、弹药和物品事件，并发送到 GameHub。",
+  "dependencies": [],
+  "extra": {
+    "godot": {
+      "authors": [
+        "API Developer",
+        "cinian"
+      ],
+      "compatible_mod_loader_version": [
+        "7.0.0"
+      ],
+      "compatible_game_version": [
+        "0.0.0"
+      ],
+      "incompatibilities": [],
+      "load_before": [],
+      "tags": [
+        "api",
+        "events",
+        "gamehub"
+      ]
+    }
+  },
+  "yokonex": {
+    "source": "buckshot_roulette",
+    "displayName": "恶魔轮盘",
+    "adapter": "Godot Mod Loader · HTTP",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "游戏启动", "eventKey": "buckshot.game_launch", "commandId": "buckshot-game-launch" },
+      { "name": "开始游戏", "eventKey": "buckshot.game_start", "commandId": "buckshot-game-start" },
+      { "name": "轮次开始", "eventKey": "buckshot.round_start", "commandId": "buckshot-round-start" },
+      { "name": "赢得轮次", "eventKey": "buckshot.round_won", "commandId": "buckshot-round-won" },
+      { "name": "生命值变化", "eventKey": "buckshot.health_changed", "commandId": "buckshot-health-changed" },
+      { "name": "生命值不可恢复", "eventKey": "buckshot.no_regeneration", "commandId": "buckshot-no-regeneration" },
+      { "name": "扣动扳机", "eventKey": "buckshot.shoot", "commandId": "buckshot-shoot" },
+      { "name": "弹药更新", "eventKey": "buckshot.ammo_updated", "commandId": "buckshot-ammo-updated" },
+      { "name": "获得道具", "eventKey": "buckshot.item_placed", "commandId": "buckshot-item-placed" },
+      { "name": "使用道具", "eventKey": "buckshot.item_used", "commandId": "buckshot-item-used" },
+      { "name": "道具被偷", "eventKey": "buckshot.item_stolen", "commandId": "buckshot-item-stolen" },
+      { "name": "清空道具", "eventKey": "buckshot.items_cleared", "commandId": "buckshot-items-cleared" },
+      { "name": "物品箱打开", "eventKey": "buckshot.item_box_opened", "commandId": "buckshot-item-box-opened" },
+      { "name": "物品箱关闭", "eventKey": "buckshot.item_box_closed", "commandId": "buckshot-item-box-closed" },
+      { "name": "使用放大镜", "eventKey": "buckshot.magnifying_glass_used", "commandId": "buckshot-magnifying-glass-used" },
+      { "name": "使用啤酒", "eventKey": "buckshot.beer_used", "commandId": "buckshot-beer-used" },
+      { "name": "使用电话", "eventKey": "buckshot.burner_phone_used", "commandId": "buckshot-burner-phone-used" },
+      { "name": "使用过期药品", "eventKey": "buckshot.medicine_used", "commandId": "buckshot-medicine-used" },
+      { "name": "玩家被铐", "eventKey": "buckshot.handcuffs_applied", "commandId": "buckshot-handcuffs-applied" },
+      { "name": "手铐解除", "eventKey": "buckshot.handcuffs_removed", "commandId": "buckshot-handcuffs-removed" },
+      { "name": "游戏胜利", "eventKey": "buckshot.game_won", "commandId": "buckshot-game-won" },
+      { "name": "游戏失败", "eventKey": "buckshot.game_lost", "commandId": "buckshot-game-lost" },
+      { "name": "分数更新", "eventKey": "buckshot.score_updated", "commandId": "buckshot-score-updated" },
+      { "name": "加倍或放弃", "eventKey": "buckshot.double_or_nothing", "commandId": "buckshot-double-or-nothing" },
+      { "name": "游戏关闭", "eventKey": "buckshot.game_close", "commandId": "buckshot-game-close" }
+    ]
+  }
+}

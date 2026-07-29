@@ -1,0 +1,32 @@
+{
+  "id": "slay_the_spire",
+  "name": "Yokonex Slay the Spire Link",
+  "version": "1.0.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "通过 CommunicationMod 采集《杀戮尖塔》状态变化事件，并发送到 GameHub。",
+  "entry": "bridge.py",
+  "yokonex": {
+    "source": "slay_the_spire",
+    "displayName": "杀戮尖塔",
+    "adapter": "CommunicationMod + WebSocket 桥接器",
+    "tutorial": "USAGE.md",
+    "sharedFiles": ["yokonex_event_client.py"],
+    "events": [
+      { "name": "开始爬塔", "eventKey": "slay_the_spire.run_started", "commandId": "slay-the-spire-run-started" },
+      { "name": "结束爬塔", "eventKey": "slay_the_spire.run_ended", "commandId": "slay-the-spire-run-ended" },
+      { "name": "进入楼层", "eventKey": "slay_the_spire.floor_entered", "commandId": "slay-the-spire-floor-entered" },
+      { "name": "战斗开始", "eventKey": "slay_the_spire.combat_started", "commandId": "slay-the-spire-combat-started" },
+      { "name": "战斗胜利", "eventKey": "slay_the_spire.combat_won", "commandId": "slay-the-spire-combat-won" },
+      { "name": "玩家受伤", "eventKey": "slay_the_spire.player_damaged", "commandId": "slay-the-spire-player-damaged" },
+      { "name": "玩家治疗", "eventKey": "slay_the_spire.player_healed", "commandId": "slay-the-spire-player-healed" },
+      { "name": "回合开始", "eventKey": "slay_the_spire.turn_started", "commandId": "slay-the-spire-turn-started" },
+      { "name": "击杀怪物", "eventKey": "slay_the_spire.monster_killed", "commandId": "slay-the-spire-monster-killed" },
+      { "name": "获得卡牌", "eventKey": "slay_the_spire.card_gained", "commandId": "slay-the-spire-card-gained" },
+      { "name": "移除卡牌", "eventKey": "slay_the_spire.card_removed", "commandId": "slay-the-spire-card-removed" },
+      { "name": "获得遗物", "eventKey": "slay_the_spire.relic_gained", "commandId": "slay-the-spire-relic-gained" },
+      { "name": "获得药水", "eventKey": "slay_the_spire.potion_gained", "commandId": "slay-the-spire-potion-gained" },
+      { "name": "金币变化", "eventKey": "slay_the_spire.gold_changed", "commandId": "slay-the-spire-gold-changed" }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Yokonex League Link",
+  "author": "辞年",
+  "version": "1.0.0",
+  "description": "读取英雄联盟 Live Client 对局事件，将击杀、死亡、助攻与地图目标等事件发送到 Gamehub。",
+  "yokonex": {
+    "source": "lol",
+    "displayName": "英雄联盟",
+    "adapter": "内置 Live Client 采集器",
+    "tutorial": "USAGE.md",
+    "events": [
+      { "name": "击杀英雄", "eventKey": "lol.champion_kill", "commandId": "1" },
+      { "name": "玩家死亡", "eventKey": "lol.death", "commandId": "2" },
+      { "name": "获得助攻", "eventKey": "lol.assist", "commandId": "0" },
+      { "name": "多杀", "eventKey": "lol.multi_kill", "commandId": "3" },
+      { "name": "第一滴血", "eventKey": "lol.first_blood", "commandId": "3" },
+      { "name": "兵线刷新", "eventKey": "lol.minions_spawning", "commandId": "0", "enabled": false },
+      { "name": "首拆防御塔", "eventKey": "lol.first_brick", "commandId": "1" },
+      { "name": "击杀小龙", "eventKey": "lol.dragon_kill", "commandId": "2" },
+      { "name": "击杀大龙", "eventKey": "lol.baron_kill", "commandId": "3" },
+      { "name": "击杀峡谷先锋", "eventKey": "lol.herald_kill", "commandId": "1" },
+      { "name": "摧毁防御塔", "eventKey": "lol.turret_killed", "commandId": "1" },
+      { "name": "摧毁水晶", "eventKey": "lol.inhib_killed", "commandId": "2" },
+      { "name": "团灭", "eventKey": "lol.ace", "commandId": "4" },
+      { "name": "玩家受伤", "eventKey": "lol.injured", "commandId": "0", "enabled": false }
+    ]
+  }
+}

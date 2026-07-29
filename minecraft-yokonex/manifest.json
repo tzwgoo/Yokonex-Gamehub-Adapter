@@ -1,0 +1,28 @@
+{
+  "name": "Yokonex Minecraft Link",
+  "author": "辞年",
+  "version": "1.1.0",
+  "description": "采集 Minecraft Forge 1.20.1 游戏事件，并只通过本机 GameHub 触发设备联动。",
+  "yokonex": {
+    "source": "minecraft",
+    "displayName": "Minecraft",
+    "adapter": "Forge Mod（本地版 + 专用服务器版）",
+    "tutorial": "USAGE.md",
+    "distributionFiles": [
+      "prebuilt/yokonex-gamehub-minecraft-1.1.0.jar",
+      "prebuilt/yokonex-gamehub-minecraft-server-1.1.0.jar"
+    ],
+    "events": [
+      { "name": "玩家加入", "eventKey": "minecraft.player_join", "commandId": "player_join" },
+      { "name": "玩家离开", "eventKey": "minecraft.player_leave", "commandId": "player_leave" },
+      { "name": "玩家聊天", "eventKey": "minecraft.player_chat", "commandId": "player_chat" },
+      { "name": "破坏方块", "eventKey": "minecraft.block_break", "commandId": "block_break" },
+      { "name": "放置方块", "eventKey": "minecraft.block_place", "commandId": "block_place" },
+      { "name": "攻击方块", "eventKey": "minecraft.block_attack", "commandId": "block_attack" },
+      { "name": "玩家死亡", "eventKey": "minecraft.player_death", "commandId": "player_death" },
+      { "name": "玩家受伤", "eventKey": "minecraft.player_damage", "commandId": "player_damage" },
+      { "name": "击杀实体", "eventKey": "minecraft.entity_killed", "commandId": "entity_killed" },
+      { "name": "使用物品", "eventKey": "minecraft.item_use", "commandId": "item_use" }
+    ]
+  }
+}

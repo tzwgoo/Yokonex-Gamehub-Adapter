@@ -1,0 +1,7 @@
+# Yokonex Cult of the Lamb Link
+
+通过 BepInEx 和 Harmony 采集《咩咩启示录》事件，并发送到 Yokonex GameHub。
+
+- 安装与使用：[`USAGE.md`](./USAGE.md)
+- 适配器配置：[`manifest.json`](./manifest.json)
+- Mod 源码：[`cult_mod`](./cult_mod/)
