@@ -1,8 +1,8 @@
 {
   "name": "SecretFlasherManaka YOKONEX Link",
   "author": "辞年",
-  "version": "0.1.0",
-  "description": "监听《Secret Flasher Manaka》的高潮、快感、振动等状态，并通过 IM 或蓝牙设备执行联动。",
+  "version": "0.2.0",
+  "description": "监听《Secret Flasher Manaka》的游戏状态，并通过本机 WebSocket 将事件上报给 GameHub。",
   "repository": "https://github.com/tzwgoo/SecretFlasherManaka-Link-YOKONEX",
   "yokonex": {
     "source": "secret_flasher_manaka",
@@ -10,10 +10,9 @@
     "adapter": "BepInEx IL2CPP Mod",
     "tutorial": "USAGE.md",
     "distributionFiles": [
+      "ManakaLinkInstaller.exe",
       "prebuilt/ManakaLinkYokonex.dll",
-      "prebuilt/ManakaLinkYokonex.deps.json",
-      "prebuilt/Microsoft.Windows.SDK.NET.dll",
-      "prebuilt/WinRT.Runtime.dll"
+      "prebuilt/ManakaLinkYokonex.deps.json"
     ],
     "events": [
       { "name": "高潮开始", "eventKey": "manaka.orgasm_started", "commandId": "orgasm_started" },
