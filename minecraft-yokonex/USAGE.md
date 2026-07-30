@@ -4,8 +4,8 @@
 
 下载后的分发包已经包含两个可直接使用的 Mod：
 
-- `prebuilt/yokonex-gamehub-minecraft-1.1.0.jar`：仅单人游戏使用。
-- `prebuilt/yokonex-gamehub-minecraft-server-1.1.0.jar`：局域网联机、专用服务器使用。
+- `prebuilt/yokonex-gamehub-minecraft-1.1.1.jar`：仅单人游戏使用。
+- `prebuilt/yokonex-gamehub-minecraft-server-1.1.1.jar`：局域网联机、专用服务器使用。
 
 两个 JAR 功能用途不同，同一个游戏实例中只能安装一个。
 
@@ -15,7 +15,7 @@
 
 1. 安装 Minecraft 1.20.1 和 Forge 47.3.0。
 2. 打开分发包的 `prebuilt` 文件夹。
-3. 将 `yokonex-gamehub-minecraft-1.1.0.jar` 复制到游戏目录的 `mods` 文件夹。
+3. 将 `yokonex-gamehub-minecraft-1.1.1.jar` 复制到游戏目录的 `mods` 文件夹。
 4. 在同一台电脑启动 Yokonex-Gamehub。
 5. 打开 GameHub 的“游戏联动”，找到 Minecraft。
 6. 启用 Minecraft，并为需要的事件配置指令。
@@ -27,7 +27,7 @@
 
 1. 所有参与联机的玩家都安装 Minecraft 1.20.1 和 Forge 47.3.0。
 2. 打开分发包的 `prebuilt` 文件夹。
-3. 将 `yokonex-gamehub-minecraft-server-1.1.0.jar` 放入房主、服务器和所有玩家的 `mods` 文件夹。
+3. 将 `yokonex-gamehub-minecraft-server-1.1.1.jar` 放入房主、服务器和所有玩家的 `mods` 文件夹。
 4. 局域网联机由房主正常进入存档，再选择“对局域网开放”；专用服务器则启动 Forge 服务端。
 5. 每个需要设备联动的玩家，在自己的电脑上启动 GameHub。
 6. 每个玩家在自己的 GameHub 中连接自己的蓝牙设备。
@@ -47,7 +47,7 @@
 
 ## 连接限制
 
-- Mod 只访问本机 `127.0.0.1:43002`。
+- Mod 只通过 `ws://127.0.0.1:43002/v1/events` 连接本机 GameHub。
 - 专用服务器版只把玩家事件发送给对应玩家，不会转发给其他玩家的 GameHub。
 - Mod 不保存 UID、Token 或 IM 地址。
 - Mod 不直接连接役次元 IM。

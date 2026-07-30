@@ -1,7 +1,7 @@
 {
   "name": "Yokonex Minecraft Link",
   "author": "辞年",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "采集 Minecraft Forge 1.20.1 游戏事件，并只通过本机 GameHub 触发设备联动。",
   "yokonex": {
     "source": "minecraft",
@@ -9,8 +9,8 @@
     "adapter": "Forge Mod（本地版 + 专用服务器版）",
     "tutorial": "USAGE.md",
     "distributionFiles": [
-      "prebuilt/yokonex-gamehub-minecraft-1.1.0.jar",
-      "prebuilt/yokonex-gamehub-minecraft-server-1.1.0.jar"
+      "prebuilt/yokonex-gamehub-minecraft-1.1.1.jar",
+      "prebuilt/yokonex-gamehub-minecraft-server-1.1.1.jar"
     ],
     "events": [
       { "name": "玩家加入", "eventKey": "minecraft.player_join", "commandId": "player_join" },
