@@ -1,0 +1,29 @@
+{
+  "name": "SecretFlasherManaka YOKONEX Link",
+  "author": "辞年",
+  "version": "0.1.0",
+  "description": "监听《Secret Flasher Manaka》的高潮、快感、振动等状态，并通过 IM 或蓝牙设备执行联动。",
+  "repository": "https://github.com/tzwgoo/SecretFlasherManaka-Link-YOKONEX",
+  "yokonex": {
+    "source": "secret_flasher_manaka",
+    "displayName": "Secret Flasher Manaka",
+    "adapter": "BepInEx IL2CPP Mod",
+    "tutorial": "USAGE.md",
+    "distributionFiles": [
+      "prebuilt/ManakaLinkYokonex.dll",
+      "prebuilt/ManakaLinkYokonex.deps.json",
+      "prebuilt/Microsoft.Windows.SDK.NET.dll",
+      "prebuilt/WinRT.Runtime.dll"
+    ],
+    "events": [
+      { "name": "高潮开始", "eventKey": "manaka.orgasm_started", "commandId": "orgasm_started" },
+      { "name": "高潮结束", "eventKey": "manaka.orgasm_ended", "commandId": "orgasm_ended" },
+      { "name": "快感变化", "eventKey": "manaka.ecstasy_changed", "commandId": "ecstasy_changed" },
+      { "name": "振动模式变化", "eventKey": "manaka.vibrator_mode_changed", "commandId": "vibrator_mode_changed" },
+      { "name": "排尿开始", "eventKey": "manaka.urination_started", "commandId": "urination_started" },
+      { "name": "排尿结束", "eventKey": "manaka.urination_ended", "commandId": "urination_ended" },
+      { "name": "活塞模式变化", "eventKey": "manaka.piston_mode_changed", "commandId": "piston_mode_changed" },
+      { "name": "心动值变化", "eventKey": "manaka.dokidoki_changed", "commandId": "dokidoki_changed" }
+    ]
+  }
+}
