@@ -9,7 +9,7 @@
     "adapter": "Game State Integration",
     "tutorial": "USAGE.md",
     "events": [
-      { "name": "玩家受伤", "eventKey": "cs2.player_hurt", "commandId": "player_hurt" },
+      { "name": "玩家受伤", "eventKey": "cs2.player_hurt", "commandId": "player_hurt", "dynamicMetrics": ["health"] },
       { "name": "玩家死亡", "eventKey": "cs2.player_death", "commandId": "player_death" },
       { "name": "闪光致盲", "eventKey": "cs2.player_flashed", "commandId": "player_flashed" },
       { "name": "烟雾影响", "eventKey": "cs2.player_smoked", "commandId": "player_smoked" },
