@@ -9,12 +9,12 @@
     "adapter": "Game State Integration",
     "tutorial": "USAGE.md",
     "events": [
-      { "name": "英雄受伤", "eventKey": "dota2.hero_damaged", "commandId": "hero_damaged" },
+      { "name": "英雄受伤", "eventKey": "dota2.hero_damaged", "commandId": "hero_damaged", "dynamicMetrics": ["health"] },
       { "name": "英雄死亡", "eventKey": "dota2.hero_killed", "commandId": "hero_killed" },
       { "name": "英雄复活", "eventKey": "dota2.hero_respawned", "commandId": "hero_respawned" },
       { "name": "英雄升级", "eventKey": "dota2.hero_level_up", "commandId": "hero_level_up" },
       { "name": "击杀英雄", "eventKey": "dota2.hero_kill_enemy", "commandId": "hero_kill_enemy" },
-      { "name": "魔法值过低", "eventKey": "dota2.mana_low", "commandId": "mana_low" }
+      { "name": "魔法值过低", "eventKey": "dota2.mana_low", "commandId": "mana_low", "dynamicMetrics": ["mana"] }
     ]
   }
 }

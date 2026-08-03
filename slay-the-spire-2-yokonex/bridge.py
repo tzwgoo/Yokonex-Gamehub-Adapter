@@ -192,11 +192,20 @@ def save_events(
             )
         ]
     events: list[tuple[str, dict[str, Any]]] = []
+    # 存档兜底事件也带上最大血量，保证动态强度计算不依赖独立 Mod。
     old_hp, new_hp = previous["health"], current["health"]
     if new_hp < old_hp:
-        events.append((f"{SOURCE}.player_damaged", {"amount": old_hp - new_hp, "health": new_hp}))
+        events.append((f"{SOURCE}.player_damaged", {
+            "amount": old_hp - new_hp,
+            "health": new_hp,
+            "maxHealth": current["maxHealth"],
+        }))
     elif new_hp > old_hp:
-        events.append((f"{SOURCE}.player_healed", {"amount": new_hp - old_hp, "health": new_hp}))
+        events.append((f"{SOURCE}.player_healed", {
+            "amount": new_hp - old_hp,
+            "health": new_hp,
+            "maxHealth": current["maxHealth"],
+        }))
     for relic in (Counter(current["relics"]) - Counter(previous["relics"])).elements():
         events.append((f"{SOURCE}.relic_gained", {"id": relic}))
     return events

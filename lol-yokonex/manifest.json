@@ -22,7 +22,7 @@
       { "name": "摧毁防御塔", "eventKey": "lol.turret_killed", "commandId": "1" },
       { "name": "摧毁水晶", "eventKey": "lol.inhib_killed", "commandId": "2" },
       { "name": "团灭", "eventKey": "lol.ace", "commandId": "4" },
-      { "name": "玩家受伤", "eventKey": "lol.injured", "commandId": "0", "enabled": false }
+      { "name": "玩家受伤", "eventKey": "lol.injured", "commandId": "0", "enabled": false, "dynamicMetrics": ["health"] }
     ]
   }
 }
