@@ -1,0 +1,18 @@
+{
+  "processNames": ["Overwatch.exe"],
+  "windowTitles": ["Overwatch"],
+  "playerRoi": [0.0, 0.72, 0.38, 1.0],
+  "anchor": [0.16, 0.91],
+  "numericRoi": [0.055, 0.87, 0.155, 0.975],
+  "numericMinConfidence": 0.82,
+  "numericMaximumValue": 9999,
+  "numericMaxHealth": 0,
+  "numericChangeThreshold": 1,
+  "captureFps": 5,
+  "detectionThreshold": 0.55,
+  "fillThreshold": 0.9,
+  "minimumConfidence": 0.58,
+  "changeThreshold": 5.0,
+  "lowThreshold": 35.0,
+  "criticalThreshold": 15.0
+}

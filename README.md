@@ -22,6 +22,7 @@ Yokonex GameHub 的游戏适配器集合。每个目录对应一个游戏，通�
 | League of Legends | [`lol-yokonex`](./lol-yokonex/) |
 | Minecraft | [`minecraft-yokonex`](./minecraft-yokonex/) |
 | Microsoft Flight Simulator | [`msfs-yokonex`](./msfs-yokonex/) |
+| Overwatch 2 | [`overwatch2-yokonex`](./overwatch2-yokonex/) |
 | Secret Flasher Manaka | [`secret-flasher-manaka-yokonex`](./secret-flasher-manaka-yokonex/) |
 | StarCraft II | [`sc2-yokonex`](./sc2-yokonex/) |
 | Slay the Spire 2 | [`slay-the-spire-2-yokonex`](./slay-the-spire-2-yokonex/) |

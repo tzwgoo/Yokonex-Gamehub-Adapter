@@ -1,0 +1,25 @@
+{
+  "id": "overwatch2",
+  "name": "Yokonex Overwatch 2 Vision Link",
+  "version": "1.1.0",
+  "sdk": "1",
+  "author": "辞年",
+  "description": "通过本地屏幕视觉模型识别《守望先锋 2》玩家血条和数字血量，不注入游戏、不读取内存。",
+  "entry": "prebuilt/YokonexOverwatchVision.exe",
+  "yokonex": {
+    "source": "overwatch2",
+    "marketplaceEnabled": true,
+    "displayName": "守望先锋 2",
+    "adapter": "本地血条与数字血量模型",
+    "tutorial": "USAGE.md",
+    "distributionFiles": ["prebuilt/YokonexOverwatchVision.exe", "vision.json"],
+    "events": [
+      { "name": "玩家受到伤害", "eventKey": "overwatch2.player_damaged", "commandId": "overwatch2-player-damaged" },
+      { "name": "玩家恢复生命", "eventKey": "overwatch2.player_healed", "commandId": "overwatch2-player-healed" },
+      { "name": "生命值偏低", "eventKey": "overwatch2.health_low", "commandId": "overwatch2-health-low" },
+      { "name": "生命值危险", "eventKey": "overwatch2.health_critical", "commandId": "overwatch2-health-critical" },
+      { "name": "玩家死亡", "eventKey": "overwatch2.player_death", "commandId": "overwatch2-player-death" },
+      { "name": "玩家恢复行动", "eventKey": "overwatch2.player_recovered", "commandId": "overwatch2-player-recovered" }
+    ]
+  }
+}
