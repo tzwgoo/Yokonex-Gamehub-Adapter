@@ -1,7 +1,7 @@
 {
   "name": "Yokonex VRChat OSC",
   "author": "辞年",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "监听 VRChat Avatar OSC 参数，按规则触发 Gamehub 的设备波形与强度联动。",
   "yokonex": {
     "source": "vrchat",
