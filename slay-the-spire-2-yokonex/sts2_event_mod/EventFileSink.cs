@@ -7,6 +7,11 @@ namespace STS2Bridge;
 internal static class EventFileSink
 {
     private static readonly object SyncRoot = new();
+    private static readonly JsonSerializerOptions SerializerOptions = new()
+    {
+        // 事件文件统一使用桥接器约定的 camelCase 字段名。
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
     private static readonly string DataRoot = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
         "SlayTheSpire2");
@@ -29,7 +34,7 @@ internal static class EventFileSink
                 gameEvent.Payload
             }
         };
-        Append(EventPath, JsonSerializer.Serialize(message));
+        Append(EventPath, JsonSerializer.Serialize(message, SerializerOptions));
     }
 
     public static void WriteDebug(string line)

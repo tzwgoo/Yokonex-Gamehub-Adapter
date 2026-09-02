@@ -95,17 +95,19 @@ def normalize_mod_event(message: dict[str, Any]) -> tuple[str, dict[str, Any]] |
     envelope = message.get("data")
     if not isinstance(envelope, dict):
         return None
-    payload = envelope.get("payload")
+    # 当前独立 Mod 由 C# 默认序列化器写入 PascalCase，兼容后续显式 camelCase 格式。
+    payload = envelope.get("payload", envelope.get("Payload"))
     data = dict(payload) if isinstance(payload, dict) else {}
     # 保留原始上下文，便于 GameHub 做楼层、房间和跑局规则。
-    for source_name, target_name in (
-        ("eventId", "upstreamEventId"),
-        ("runId", "runId"),
-        ("floor", "floor"),
-        ("roomType", "roomType"),
+    for source_names, target_name in (
+        (("eventId", "EventId"), "upstreamEventId"),
+        (("runId", "RunId"), "runId"),
+        (("floor", "Floor"), "floor"),
+        (("roomType", "RoomType"), "roomType"),
     ):
-        if envelope.get(source_name) is not None:
-            data[target_name] = envelope[source_name]
+        value = next((envelope[name] for name in source_names if envelope.get(name) is not None), None)
+        if value is not None:
+            data[target_name] = value
     return mod_event_key(message["type"]), data
 
 

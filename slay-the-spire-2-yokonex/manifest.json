@@ -1,7 +1,7 @@
 {
   "id": "slay_the_spire_2",
   "name": "Yokonex Slay the Spire 2 Link",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "sdk": "1",
   "author": "辞年",
   "description": "通过自带的独立游戏 Mod 采集《杀戮尖塔2》事件，并用官方日志和存档兜底。",
