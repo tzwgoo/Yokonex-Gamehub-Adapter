@@ -1,7 +1,7 @@
 {
   "name": "Yokonex League Link",
   "author": "辞年",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "读取英雄联盟 Live Client 对局事件，将击杀、死亡、助攻与地图目标等事件发送到 Gamehub。",
   "yokonex": {
     "source": "lol",
